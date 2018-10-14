@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mrits_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dips_32"
+        android:gravity="center"
+        android:text="@string/event_name"
+        android:textAllCaps="true"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/mrits_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/csi_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dips_8"
+        android:fontFamily="@font/pianaforma"
+        android:gravity="center"
+        android:padding="@dimen/dips_16"
+        android:text="@string/mrits"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/csi_iv"
+        android:layout_width="@dimen/dips_150"
+        android:layout_height="@dimen/dips_150"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/csi_logo"
+        android:src="@drawable/csi_logo_india" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/csi_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dips_8"
+        android:fontFamily="@font/pianaforma"
+        android:padding="@dimen/dips_16"
+        android:text="@string/csi"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dips_32"
+        android:text="@string/credits" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Quizdroid</string>
+
+    <!--Label for Manifest File-->
+    <string name="main_activity">MainActivity</string>
+
+    <!--Description for ImageView-->
+    <string name="csi_logo">CSI Logo</string>
+
+    <!--Splash Activity Strings-->
+    <string name="event_name">Event Name</string>
+    <string name="round_name">Round Name</string>
+    <string name="mrits">Malla Reddy Institute of Technology and Science</string>
+    <string name="csi">Computer Society of India</string>
+    <string name="credits">Made with \u2764 by <b>TEAM CSI-MRITS</b></string>
+
+    <!--User Details Activity Strings-->
+    <string name="team_no">Team No.</string>
+    <string name="name">Name</string>
+    <string name="year">Year \u0020\u0020\u0020\u0020 :</string>
+    <string name="branch">Branch :</string>
+    <string name="set">Set \u0020\u0020\u0020\u0020\u0020\u0020 :</string>
+    <string name="instructions"><u>Read Instructions</u></string>
+    <string name="lets_start">Let\'s Start</string>
+    <string name="empty_fields">EMPTY FIELDS</string>
+
+    <string-array name="array_branch">
+        <item>CSE</item>
+        <item>IT</item>
+        <item>ECE</item>
+        <item>CE</item>
+    </string-array>
+
+    <string-array name="array_year">
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+        <item>Final</item>
+    </string-array>
+
+    <string-array name="array_set">
+        <item>SET 1</item>
+        <item>SET 2</item>
+        <item>SET 3</item>
+    </string-array>
+
+    <!--Exit Dialog-->
+    <string name="exit_title">Exit</string>
+    <string name="exit_message">Are you sure you want to exit?</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_message">Here goes the <b>Instructions</b> \n 1. Read the instructions carefully
+            \n 2. Read the instructions carefully \n 3. Read the instructions carefully
+            \n 4. Read the instructions carefully \n 5. Read the instructions carefully</string>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserDetailsActivity">
+
+    <TextView
+       android:layout_margin="@dimen/dips_32"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/round_name"
+        android:textAllCaps="true"
+        android:fontFamily="@font/varsity_regular"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/team_no_et"
+        style="@style/AppTheme.MarginType1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/team_no"
+        android:inputType="number"
+        android:maxLength="3"
+        android:paddingStart="@dimen/dips_8"
+        android:paddingLeft="@dimen/dips_8"
+        android:paddingEnd="@dimen/dips_8"
+        android:paddingRight="@dimen/dips_8"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/name_et"
+        style="@style/AppTheme.MarginType1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="text|textCapWords"
+        android:paddingStart="@dimen/dips_8"
+        android:paddingLeft="@dimen/dips_8"
+        android:paddingEnd="@dimen/dips_8"
+        android:paddingRight="@dimen/dips_8"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <LinearLayout
+        style="@style/AppTheme.MarginType2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dips_8"
+            android:text="@string/year"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/year_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_year" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/AppTheme.MarginType2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dips_8"
+            android:text="@string/branch"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/branch_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_branch" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/AppTheme.MarginType2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dips_8"
+            android:text="@string/set"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/set_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/array_set" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/instructions_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/dips_8"
+        android:text="@string/instructions"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/start_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dips_16"
+        android:background="@color/colorBlue900"
+        android:text="@string/lets_start"
+        android:textColor="@android:color/white" />
+</LinearLayout>
