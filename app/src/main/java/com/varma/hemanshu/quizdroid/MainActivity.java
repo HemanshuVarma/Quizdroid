@@ -8,13 +8,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
+    @BindView(R.id.team_tv)
     TextView teamTV;
+    @BindView(R.id.name_tv)
     TextView nameTV;
+    @BindView(R.id.branch_tv)
     TextView branchTV;
+    @BindView(R.id.year_tv)
     TextView yearTV;
+    @BindView(R.id.set_tv)
     TextView setTV;
+    @BindView(R.id.attempts_tv)
     TextView attemptsTV;
 
     String teamString;
@@ -32,16 +41,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loadData();
-        count++;
+        //Setting up BindView
+        ButterKnife.bind(this);
 
-        teamTV = findViewById(R.id.team_tv);
-        nameTV = findViewById(R.id.name_tv);
-        yearTV = findViewById(R.id.year_tv);
-        branchTV = findViewById(R.id.branch_tv);
-        setTV = findViewById(R.id.set_tv);
-        attemptsTV = findViewById(R.id.attempts_tv);
-
+        //Retrieving the Passed Values
         Intent i = getIntent();
         teamString = i.getStringExtra("TEAM_NO");
         nameString = i.getStringExtra("NAME");
@@ -49,12 +52,24 @@ public class MainActivity extends AppCompatActivity {
         branchString = i.getStringExtra("BRANCH");
         setString = i.getStringExtra("SET");
 
+        //Setting up in TextView
         teamTV.setText(teamString);
         nameTV.setText(nameString);
         yearTV.setText(yearString);
         branchTV.setText(branchString);
         setTV.setText(setString);
 
+    }
+
+    /**
+     * To count the No. of Attempts.
+     * Counts when - Minimized, Invoked from UserDetails Activity.
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadData();
+        count++;
         attemptsTV.setText(String.valueOf(count));
         saveData();
     }

@@ -12,19 +12,30 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * User Details Activity
  * To get Basic Info of user.
  */
 public class UserDetailsActivity extends AppCompatActivity {
 
-    Spinner branchSpinner;
-    Spinner yearSpinner;
-    Spinner setSpinner;
-    Button startButton;
-    TextView instructionsTextView;
+
+    @BindView(R.id.team_no_et)
     EditText teamEditText;
+    @BindView(R.id.name_et)
     EditText nameEditText;
+    @BindView(R.id.year_sv)
+    Spinner yearSpinner;
+    @BindView(R.id.branch_sv)
+    Spinner branchSpinner;
+    @BindView(R.id.set_sv)
+    Spinner setSpinner;
+    @BindView(R.id.instructions_tv)
+    TextView instructionsTextView;
+    @BindView(R.id.start_tv)
+    Button startButton;
 
     public String selectedBranch;
     public String selectedYear;
@@ -37,13 +48,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_details);
 
-        teamEditText = findViewById(R.id.team_no_et);
-        nameEditText = findViewById(R.id.name_et);
-        yearSpinner = findViewById(R.id.year_sv);
-        branchSpinner = findViewById(R.id.branch_sv);
-        setSpinner = findViewById(R.id.set_sv);
-        startButton = findViewById(R.id.start_tv);
-        instructionsTextView = findViewById(R.id.instructions_tv);
+        ButterKnife.bind(this);
 
         // Listener for Instructions TextView
         // Displays a Dialog with all the instructions and Ok Button in it.
