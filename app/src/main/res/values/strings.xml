@@ -44,11 +44,27 @@
         <item>SET 3</item>
     </string-array>
 
-    <!--Exit Dialog-->
+    <!--Dialog-->
     <string name="exit_title">Exit</string>
     <string name="exit_message">Are you sure you want to exit?</string>
     <string name="instructions_title">Instructions</string>
     <string name="instructions_message">Here goes the <b>Instructions</b> \n 1. Read the instructions carefully
             \n 2. Read the instructions carefully \n 3. Read the instructions carefully
             \n 4. Read the instructions carefully \n 5. Read the instructions carefully</string>
+
+    <!--Dialog Score-->
+    <string name="submit">Submit</string>
+    <string name="title_score">Score</string>
+    <string name="team_score">Team No. :</string>
+    <string name="name_score">Name :</string>
+    <string name="year_score">Year :</string>
+    <string name="branch_score">Branch :</string>
+    <string name="set_score">Set :</string>
+    <string name="attempts_score">Attempts :</string>
+
+    <!--SET 1 QUESTIONS-->
+    <string name="que_1">When did the <b>First</b> version of Microsoft released?</string>
+    <string name="que1_r1">November 28, 1985</string>
+    <string name="que1_r2">January 28, 1985</string>
+    <string name="que1_r3">November 20, 1985</string>
 </resources>

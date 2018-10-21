@@ -6,10 +6,14 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,12 +29,16 @@ public class MainActivity extends AppCompatActivity {
     TextView setTV;
     @BindView(R.id.attempts_tv)
     TextView attemptsTV;
+    @BindView(R.id.submit_btn)
+    Button submitBTN;
 
     String teamString;
     String nameString;
     String branchString;
     String yearString;
     String setString;
+    String attemptString;
+    String dialogInfo;
 
     public static final String SHARED_PREF = "Shared Pref";
     public static final String COUNT = "Count";
@@ -59,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
         branchTV.setText(branchString);
         setTV.setText(setString);
 
+        submitBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                score();
+            }
+        });
     }
 
     /**
@@ -70,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         loadData();
         count++;
-        attemptsTV.setText(String.valueOf(count));
+        attemptString = String.valueOf(count);
+        attemptsTV.setText(attemptString);
         saveData();
     }
 
@@ -91,6 +106,17 @@ public class MainActivity extends AppCompatActivity {
     public void loadData() {
         SharedPreferences mySharedPref = getSharedPreferences(SHARED_PREF, MODE_PRIVATE);
         count = mySharedPref.getInt(COUNT, 0);
+    }
+
+    private void score() {
+        dialogInfo = getString(R.string.team_score) + "\u0020" + teamString + "\n" + getString(R.string.name_score) + "\u0020"
+                + nameString + "\n" + getString(R.string.year_score) + "\u0020" + yearString + "\n"
+                + getString(R.string.branch_score) + "\u0020" + branchString + "\n" + getString(R.string.set_score) + "\u0020"
+                + setString + "\n" + getString(R.string.attempts_score) + "\u0020" + attemptString;
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.title_score)
+                .setMessage(dialogInfo)
+                .setPositiveButton(android.R.string.yes, null).create().show();
     }
 
     /**

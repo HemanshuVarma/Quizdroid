@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--DP Values-->
     <dimen name="dips_4">4dp</dimen>
     <dimen name="dips_8">8dp</dimen>
     <dimen name="dips_16">16dp</dimen>
     <dimen name="dips_32">32dp</dimen>
     <dimen name="dips_150">150dp</dimen>
+
+    <!--SP Values-->
+    <dimen name="sp_14">14sp</dimen>
 </resources>
