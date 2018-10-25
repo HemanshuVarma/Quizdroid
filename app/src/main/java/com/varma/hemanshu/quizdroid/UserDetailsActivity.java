@@ -76,18 +76,33 @@ public class UserDetailsActivity extends AppCompatActivity {
                     selectedSet = setSpinner.getSelectedItem().toString();
                     switch (setSpinner.getSelectedItemPosition()) {
                         case 0:
-                            Intent i = new Intent(UserDetailsActivity.this, MainActivity.class);
-                            i.putExtra("TEAM_NO", teamNo);
-                            i.putExtra("NAME", userName);
-                            i.putExtra("BRANCH", selectedBranch);
-                            i.putExtra("YEAR", selectedYear);
-                            i.putExtra("SET", selectedSet);
-                            startActivity(i);
+                            Intent setOneIntent = new Intent(UserDetailsActivity.this, MainActivity.class);
+                            setOneIntent.putExtra("TEAM_NO", teamNo);
+                            setOneIntent.putExtra("NAME", userName);
+                            setOneIntent.putExtra("BRANCH", selectedBranch);
+                            setOneIntent.putExtra("YEAR", selectedYear);
+                            setOneIntent.putExtra("SET", selectedSet);
+                            startActivity(setOneIntent);
+                            Toast.makeText(UserDetailsActivity.this, "SET 2", Toast.LENGTH_SHORT).show();
                             break;
                         case 1:
+                            Intent setTwoIntent = new Intent(UserDetailsActivity.this, SetTwoActivity.class);
+                            setTwoIntent.putExtra("TEAM_NO", teamNo);
+                            setTwoIntent.putExtra("NAME", userName);
+                            setTwoIntent.putExtra("BRANCH", selectedBranch);
+                            setTwoIntent.putExtra("YEAR", selectedYear);
+                            setTwoIntent.putExtra("SET", selectedSet);
+                            startActivity(setTwoIntent);
                             Toast.makeText(UserDetailsActivity.this, "SET 2", Toast.LENGTH_SHORT).show();
                             break;
                         case 2:
+                            Intent setThreeIntent = new Intent(UserDetailsActivity.this, SetThreeActivity.class);
+                            setThreeIntent.putExtra("TEAM_NO", teamNo);
+                            setThreeIntent.putExtra("NAME", userName);
+                            setThreeIntent.putExtra("BRANCH", selectedBranch);
+                            setThreeIntent.putExtra("YEAR", selectedYear);
+                            setThreeIntent.putExtra("SET", selectedSet);
+                            startActivity(setThreeIntent);
                             Toast.makeText(UserDetailsActivity.this, "SET 3", Toast.LENGTH_SHORT).show();
                             break;
                     }

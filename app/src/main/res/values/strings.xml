@@ -3,6 +3,9 @@
 
     <!--Label for Manifest File-->
     <string name="main_activity">MainActivity</string>
+    <string name="user_details_activity">UserDetailsActivity</string>
+    <string name="set_two_activity">SetTwoActivity</string>
+    <string name="set_three_activity">SetThreeActivity</string>
 
     <!--Description for ImageView-->
     <string name="csi_logo">CSI Logo</string>
@@ -55,15 +58,15 @@
     <!--Dialog Score-->
     <string name="submit">Submit</string>
     <string name="title_score">Score</string>
-    <string name="team_score">Team No. :</string>
-    <string name="name_score">Name :</string>
-    <string name="year_score">Year :</string>
-    <string name="branch_score">Branch :</string>
-    <string name="set_score">Set :</string>
-    <string name="attempts_score">Attempts :</string>
+    <string name="team_score"><b>Team No. :</b></string>
+    <string name="name_score"><b>Name :</b></string>
+    <string name="year_score"><b>Year :</b></string>
+    <string name="branch_score"><b>Branch :</b></string>
+    <string name="set_score"><b>Set :</b></string>
+    <string name="attempts_score"><b>Attempts :</b></string>
 
     <!--SET 1 QUESTIONS-->
-    <string name="que_1">When did the <b>First</b> version of Microsoft released?</string>
+    <string name="que_1">When did the First version of Microsoft released?</string>
     <string name="que1_r1">November 28, 1985</string>
     <string name="que1_r2">January 28, 1985</string>
     <string name="que1_r3">November 20, 1985</string>

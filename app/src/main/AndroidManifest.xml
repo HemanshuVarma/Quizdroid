@@ -23,10 +23,21 @@
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/main_activity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UserDetailsActivity"
             android:configChanges="keyboardHidden|orientation"
+            android:label="@string/user_details_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetTwoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/set_two_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetThreeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/set_three_activity"
             android:screenOrientation="portrait" />
     </application>
 
