@@ -63,7 +63,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         });
 
         /*Listener for Start Button.
-         * When invoked, it checks for Empty state of EditText/Input before proceeding to MainActivity for Quiz
+         * When invoked, it checks for Empty state of EditText/Input before proceeding to SetOneActivity for Quiz
          * A method isEmpty is called to verify field*/
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,14 +76,14 @@ public class UserDetailsActivity extends AppCompatActivity {
                     selectedSet = setSpinner.getSelectedItem().toString();
                     switch (setSpinner.getSelectedItemPosition()) {
                         case 0:
-                            Intent setOneIntent = new Intent(UserDetailsActivity.this, MainActivity.class);
+                            Intent setOneIntent = new Intent(UserDetailsActivity.this, SetOneActivity.class);
                             setOneIntent.putExtra("TEAM_NO", teamNo);
                             setOneIntent.putExtra("NAME", userName);
                             setOneIntent.putExtra("BRANCH", selectedBranch);
                             setOneIntent.putExtra("YEAR", selectedYear);
                             setOneIntent.putExtra("SET", selectedSet);
                             startActivity(setOneIntent);
-                            Toast.makeText(UserDetailsActivity.this, "SET 2", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UserDetailsActivity.this, R.string.set1, Toast.LENGTH_SHORT).show();
                             break;
                         case 1:
                             Intent setTwoIntent = new Intent(UserDetailsActivity.this, SetTwoActivity.class);

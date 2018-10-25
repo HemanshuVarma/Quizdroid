@@ -8,25 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class SetOneActivity extends AppCompatActivity {
 
-    @BindView(R.id.team_tv)
-    TextView teamTV;
-    @BindView(R.id.name_tv)
-    TextView nameTV;
-    @BindView(R.id.branch_tv)
-    TextView branchTV;
-    @BindView(R.id.year_tv)
-    TextView yearTV;
-    @BindView(R.id.set_tv)
-    TextView setTV;
-    @BindView(R.id.attempts_tv)
-    TextView attemptsTV;
     @BindView(R.id.submit1_btn)
     Button submitBTN;
 
@@ -45,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_set_one);
 
         //Setting up BindView
         ButterKnife.bind(this);
@@ -57,13 +44,6 @@ public class MainActivity extends AppCompatActivity {
         yearString = i.getStringExtra("YEAR");
         branchString = i.getStringExtra("BRANCH");
         setString = i.getStringExtra("SET");
-
-        //Setting up in TextView
-        teamTV.setText(teamString);
-        nameTV.setText(nameString);
-        yearTV.setText(yearString);
-        branchTV.setText(branchString);
-        setTV.setText(setString);
 
         submitBTN.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         loadData();
         count++;
         attemptString = String.valueOf(count);
-        attemptsTV.setText(attemptString);
         saveData();
     }
 

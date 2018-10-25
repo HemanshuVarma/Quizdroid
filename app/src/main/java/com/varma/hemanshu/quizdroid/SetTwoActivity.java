@@ -12,9 +12,9 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.varma.hemanshu.quizdroid.MainActivity.COUNT;
-import static com.varma.hemanshu.quizdroid.MainActivity.SHARED_PREF;
-import static com.varma.hemanshu.quizdroid.MainActivity.count;
+import static com.varma.hemanshu.quizdroid.SetOneActivity.COUNT;
+import static com.varma.hemanshu.quizdroid.SetOneActivity.SHARED_PREF;
+import static com.varma.hemanshu.quizdroid.SetOneActivity.count;
 
 public class SetTwoActivity extends AppCompatActivity {
 
