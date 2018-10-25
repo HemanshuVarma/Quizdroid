@@ -20,14 +20,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SetOneActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:label="@string/set_one_activity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".UserDetailsActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/user_details_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SetOneActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/set_one_activity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SetTwoActivity"

@@ -67,8 +67,30 @@
 
     <!--SET 1 QUESTIONS-->
     <string name="set1">SET 1</string>
-    <string name="que_1">When did the First version of Microsoft released?</string>
-    <string name="que1_r1">November 28, 1985</string>
-    <string name="que1_r2">January 28, 1985</string>
-    <string name="que1_r3">November 20, 1985</string>
+    <string name="edit_text_hint">Answer here</string>
+    <string name="s1_que_1">When did the First version of Microsoft released?</string>
+    <string name="s1_que1_r1">November 28, 1985</string>
+    <string name="s1_que1_r2">January 28, 1985</string>
+    <string name="s1_que1_r3">November 20, 1985</string>
+
+    <string name="s1_que_2">What is the free disk space in windows 1.01?</string>
+    <string name="s1_que2_r1">30024k</string>
+    <string name="s1_que2_r2">39821k</string>
+    <string name="s1_que2_r3">30023k</string>
+
+    <string name="s1_que_3">Is there <b>v1.01</b> computer have double-sided disk or not!</string>
+    <string name="s1_que3_r1">Yes</string>
+    <string name="s1_que3_r2">No</string>
+
+    <string name="s1_que_4">What is command for <b>size</b> in windows version 2.0?</string>
+    <string name="s1_que4_ans">Alt+F8</string>
+
+    <string name="s1_que_5">Which is the First version were we can minimize and maximize window?</string>
+    <string name="s1_que5_r1">Windows 1.01</string>
+    <string name="s1_que5_r2">Windows 10</string>
+    <string name="s1_que5_r3">Windows 2.0</string>
+
+    <string name="s1_que_6">On May 22, 1990 which version of window released?</string>
+    <string name="s1_que6_ans">Windows 3.0</string>
+
 </resources>
