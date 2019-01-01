@@ -15,6 +15,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -80,10 +83,13 @@ public class SetOneActivity extends AppCompatActivity {
     @BindView(R.id.que25_radios)
     RadioGroup que25;
 
-
     //Linking Submit Button
     @BindView(R.id.submit1_btn)
     Button submitBTN;
+
+    //Firebase Instances
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mDatabaseReference;
 
     String teamString;
     String nameString;
@@ -104,6 +110,9 @@ public class SetOneActivity extends AppCompatActivity {
 
         //Setting up BindView
         ButterKnife.bind(this);
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = mFirebaseDatabase.getReference().child("result");
 
         //Retrieving the Passed Values
         Intent i = getIntent();
@@ -265,6 +274,8 @@ public class SetOneActivity extends AppCompatActivity {
                 + getString(R.string.branch_score) + "\u0020" + branchString + "\n" + getString(R.string.set_score) + "\u0020"
                 + setString + "\n" + getString(R.string.attempts_score) + "\u0020" + attemptString +
                 "\n" + getString(R.string.title_score) + "\u0020" + points;
+        String result = "Team:" +teamString + " Att:" +attemptString + " Scr:" +points;
+        mDatabaseReference.push().setValue(result);
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_score)
                 .setMessage(dialogInfo)
