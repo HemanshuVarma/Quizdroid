@@ -10,6 +10,11 @@
     <!--Description for ImageView-->
     <string name="csi_logo">CSI Logo</string>
 
+    <!--Misc.-->
+    <string name="teamETError">Team No. Required</string>
+    <string name="nameETError">Name Required</string>
+    <string name="required">Required</string>
+
     <!--Splash Activity Strings-->
     <string name="event_name">Event Name</string>
     <string name="round_name">Round Name</string>
@@ -25,7 +30,7 @@
     <string name="set">Set \u0020\u0020\u0020\u0020\u0020\u0020 :</string>
     <string name="instructions"><u>Read Instructions</u></string>
     <string name="lets_start">Let\'s Start</string>
-    <string name="empty_fields">EMPTY FIELDS</string>
+    <string name="empty_fields">All Answers Required!</string>
 
     <string-array name="array_branch">
         <item>CSE</item>
@@ -51,13 +56,14 @@
     <string name="exit_title">Exit</string>
     <string name="exit_message">Are you sure you want to exit?</string>
     <string name="instructions_title">Instructions</string>
+    <string name="close">Close</string>
     <string name="instructions_message">Here goes the <b>Instructions</b> \n 1. Read the instructions carefully
             \n 2. Read the instructions carefully \n 3. Read the instructions carefully
             \n 4. Read the instructions carefully \n 5. Read the instructions carefully</string>
 
     <!--Dialog Score-->
     <string name="submit">Submit</string>
-    <string name="title_score">Score</string>
+    <string name="title_score">Score :</string>
     <string name="team_score"><b>Team No. :</b></string>
     <string name="name_score"><b>Name :</b></string>
     <string name="year_score"><b>Year :</b></string>
@@ -131,7 +137,7 @@
     <string name="s1_que14_r3">Windows 8</string>
 
     <string name="s1_que_15">In which year Microsoft Windows98 is released?</string>
-    <string name="s1_que15_ans">July 25, 1998</string>
+    <string name="s1_que15_ans">July 25 1998</string>
 
     <string name="s1_que_16">In Windows 98 we can change</string>
     <string name="s1_que16_cb1">Color</string>

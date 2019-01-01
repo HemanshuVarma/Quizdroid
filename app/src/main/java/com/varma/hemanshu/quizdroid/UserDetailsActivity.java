@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -107,7 +108,12 @@ public class UserDetailsActivity extends AppCompatActivity {
                             break;
                     }
                 } else {
-                    Toast.makeText(UserDetailsActivity.this, R.string.empty_fields, Toast.LENGTH_SHORT).show();
+                    if (isEmpty(teamEditText)){
+                        teamEditText.setError(getString(R.string.teamETError));
+                    }
+                    if(isEmpty(nameEditText)){
+                        nameEditText.setError(getString(R.string.nameETError));
+                    }
                 }
             }
         });
@@ -119,7 +125,7 @@ public class UserDetailsActivity extends AppCompatActivity {
      * @param etText EditText is passed into this
      * @return true is the EditText isEmpty
      */
-    private boolean isEmpty(EditText etText) {
+    public boolean isEmpty(EditText etText) {
         return etText.getText().toString().trim().length() == 0;
     }
 

@@ -10,7 +10,6 @@
 
         <!--QUESTION 1 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que1"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,7 +58,6 @@
 
         <!--QUESTION 2 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que2"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,7 +106,6 @@
 
         <!--QUESTION 3 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que3"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -151,7 +148,6 @@
 
         <!--QUESTION 4 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que4"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -181,7 +177,6 @@
 
         <!--QUESTION 5 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que5"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -230,7 +225,6 @@
 
         <!--QUESTION 6 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que6"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -260,7 +254,6 @@
 
         <!--QUESTION 7 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que7"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -309,7 +302,6 @@
 
         <!--QUESTION 8 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que8"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -358,7 +350,6 @@
 
         <!--QUESTION 9 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que9"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -388,7 +379,6 @@
 
         <!--QUESTION 10 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que10"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -443,7 +433,6 @@
 
         <!--QUESTION 11 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que11"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -492,7 +481,6 @@
 
         <!--QUESTION 12 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que12"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -541,7 +529,6 @@
 
         <!--QUESTION 13 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que13"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -571,7 +558,6 @@
 
         <!--QUESTION 14 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que14"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -620,7 +606,6 @@
 
         <!--QUESTION 15 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que15"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -650,7 +635,6 @@
 
         <!--QUESTION 16 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que16"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -681,7 +665,6 @@
                         android:text="@string/s1_que16_cb1" />
 
                     <CheckBox
-                        android:id="@+id/que16_cb2"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -695,7 +678,6 @@
                         android:text="@string/s1_que16_cb3" />
 
                     <CheckBox
-                        android:id="@+id/que16_cb4"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -708,7 +690,6 @@
 
         <!--QUESTION 17 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que17"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -738,7 +719,6 @@
 
         <!--QUESTION 18 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que18"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -787,7 +767,6 @@
 
         <!--QUESTION 19 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que19"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -836,7 +815,6 @@
 
         <!--QUESTION 20 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que20"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -874,14 +852,12 @@
                         android:text="@string/s1_que20_cb2" />
 
                     <CheckBox
-                        android:id="@+id/que20_cb3"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/s1_que20_cb3" />
 
                     <CheckBox
-                        android:id="@+id/que20_cb4"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -894,7 +870,6 @@
 
         <!--QUESTION 21 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que21"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -932,7 +907,6 @@
                         android:text="@string/s1_que21_cb2" />
 
                     <CheckBox
-                        android:id="@+id/que21_cb3"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -946,7 +920,6 @@
 
         <!--QUESTION 22 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que22"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -984,7 +957,6 @@
                         android:text="@string/s1_que22_cb2" />
 
                     <CheckBox
-                        android:id="@+id/que22_cb3"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -998,7 +970,6 @@
 
         <!--QUESTION 23 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que23"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1028,7 +999,6 @@
 
         <!--QUESTION 24 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que24"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1077,7 +1047,6 @@
 
         <!--QUESTION 25 HERE-->
         <android.support.v7.widget.CardView
-            android:id="@+id/que25"
             style="@style/AppTheme.MarginType1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
