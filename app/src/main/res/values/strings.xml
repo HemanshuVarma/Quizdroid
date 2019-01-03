@@ -14,6 +14,13 @@
     <string name="teamETError">Team No. Required</string>
     <string name="nameETError">Name Required</string>
     <string name="required">Required</string>
+    <string name="title_team"> Team \u0020</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="rating">Rate Us</string>
+    <string name="feedback_text">How was your overall Experience?</string>
+    <string name="suggestion">How can we improve it further</string>
+    <string name="rating_tv">You rated : \u0020</string>
+    <string name="submission_prompt">Thank You for your Feedback!</string>
 
     <!--Splash Activity Strings-->
     <string name="event_name">Event Name</string>
@@ -57,9 +64,11 @@
     <string name="exit_message">Are you sure you want to exit?</string>
     <string name="instructions_title">Instructions</string>
     <string name="close">Close</string>
-    <string name="instructions_message">Here goes the <b>Instructions</b> \n 1. Read the instructions carefully
-            \n 2. Read the instructions carefully \n 3. Read the instructions carefully
-            \n 4. Read the instructions carefully \n 5. Read the instructions carefully</string>
+    <string name="instructions_message"> 1. Blanks carry <b>FIVE</b> points each. \n
+        2. Multiple Answer question <i>(CheckBox)</i> carry <b>TWO</b> points. \n
+        3. Single Answer question <i>(RadioButton)</i> carry <b>ONE</b> point. \n
+        4. Number of Attempts are incremented each time the App is minimized. \n
+        5. If the Number of Attempts are more than <b>ONE</b> the team will be <b>disqualified</b>.</string>
 
     <!--Dialog Score-->
     <string name="submit">Submit</string>

@@ -3,10 +3,14 @@ package com.varma.hemanshu.quizdroid;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -122,13 +126,36 @@ public class SetOneActivity extends AppCompatActivity {
         branchString = i.getStringExtra("BRANCH");
         setString = i.getStringExtra("SET");
 
+        Toolbar toolbar =(Toolbar) findViewById(R.id.toolbar);
+        if (toolbar!= null){
+            setSupportActionBar(toolbar);
+        }
+        getSupportActionBar().setLogo(R.drawable.csi_logo_india);
+        String title = getString(R.string.title_team) + teamString;
+        getSupportActionBar().setTitle(title);
         submitBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 evaluateQuiz();
             }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.quiz_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.feedback :
+                Intent i = new Intent(SetOneActivity.this,FeedbackActivity.class);
+                startActivity(i);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -152,7 +179,6 @@ public class SetOneActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = mySharedPref.edit();
         editor.putInt(COUNT, count);
         editor.apply();
-
     }
 
     /**
@@ -253,14 +279,29 @@ public class SetOneActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Function to return the RadioValue
+     * @param radios Passing RadioGroup to get the selected value
+     * @return checked radio value
+     */
     private String getRadioValue(RadioGroup radios) {
         return ((RadioButton) findViewById(radios.getCheckedRadioButtonId())).getText().toString();
     }
 
+    /**
+     * Function to return EditText Value
+     * @param et Passing EditText whose value is to be obtained
+     * @return EditText to String
+     */
     private String getEditTextValue(EditText et) {
         return et.getText().toString().trim();
     }
 
+    /**
+     * Function to return Checked CheckBox
+     * @param cb CheckBox
+     * @return True if CheckBox is selected.
+     */
     private boolean getCheckBoxStatus(CheckBox cb) {
         return cb.isChecked();
     }

@@ -44,4 +44,16 @@
         <item name="android:paddingEnd">@dimen/dips_8</item>
     </style>
 
+    <style name="MenuOverflowTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:itemBackground">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+    <!--Used for RatingBar-->
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@color/duskYellow</item>
+    </style>
+
 </resources>

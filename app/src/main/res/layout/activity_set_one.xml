@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SetOneActivity">
 
-    <ScrollView
+    <include
+        layout="@layout/toolbar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/submit1_btn">
+        android:layout_height="wrap_content"/>
 
-        <include layout="@layout/activity_ques_set1" />
-
-    </ScrollView>
-
-    <Button
-        android:id="@+id/submit1_btn"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/dips_16"
-        android:background="@color/colorBlue900"
-        android:text="@string/submit"
-        android:textColor="@android:color/white" />
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/submit1_btn">
+
+            <include layout="@layout/activity_ques_set1" />
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/submit1_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dips_16"
+            android:background="@color/colorBlue900"
+            android:text="@string/submit"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</LinearLayout>
