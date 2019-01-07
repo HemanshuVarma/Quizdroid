@@ -3,7 +3,6 @@ package com.varma.hemanshu.quizdroid;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,15 +18,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.varma.hemanshu.quizdroid.UserDetailsActivity.COUNT;
+import static com.varma.hemanshu.quizdroid.UserDetailsActivity.SHARED_PREF;
+import static com.varma.hemanshu.quizdroid.UserDetailsActivity.count;
 
 public class SetOneActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = SetOneActivity.class.getSimpleName();
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     @BindView(R.id.que1_radios)
     RadioGroup que1;
     @BindView(R.id.que2_radios)
@@ -91,21 +93,14 @@ public class SetOneActivity extends AppCompatActivity {
     @BindView(R.id.submit1_btn)
     Button submitBTN;
 
-    //Firebase Instances
-    private FirebaseDatabase mFirebaseDatabase;
-    private DatabaseReference mDatabaseReference;
-
     String teamString;
     String nameString;
-    String branchString;
     String yearString;
+    String branchString;
     String setString;
     String attemptString;
     String dialogInfo;
-
-    public static final String SHARED_PREF = "Shared Pref";
-    public static final String COUNT = "Count";
-    public static int count;
+    int submitCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,24 +110,23 @@ public class SetOneActivity extends AppCompatActivity {
         //Setting up BindView
         ButterKnife.bind(this);
 
-        mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference = mFirebaseDatabase.getReference().child("result");
+        //Accessing Data from UserDetailsActivity
+        teamString = UserDetailsActivity.teamNo;
+        nameString = UserDetailsActivity.userName;
+        yearString = UserDetailsActivity.selectedYear;
+        branchString = UserDetailsActivity.selectedBranch;
+        setString = UserDetailsActivity.selectedSet;
 
-        //Retrieving the Passed Values
-        Intent i = getIntent();
-        teamString = i.getStringExtra("TEAM_NO");
-        nameString = i.getStringExtra("NAME");
-        yearString = i.getStringExtra("YEAR");
-        branchString = i.getStringExtra("BRANCH");
-        setString = i.getStringExtra("SET");
-
-        Toolbar toolbar =(Toolbar) findViewById(R.id.toolbar);
-        if (toolbar!= null){
-            setSupportActionBar(toolbar);
-        }
-        getSupportActionBar().setLogo(R.drawable.csi_logo_india);
         String title = getString(R.string.title_team) + teamString;
-        getSupportActionBar().setTitle(title);
+        try {
+            if (toolbar != null) {
+                setSupportActionBar(toolbar);
+                getSupportActionBar().setLogo(R.drawable.csi_logo_india);
+                getSupportActionBar().setTitle(title);
+            }
+        } catch (Exception e) {
+            Log.v(LOG_TAG, "Toolbar inflated");
+        }
         submitBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,9 +143,9 @@ public class SetOneActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.feedback :
-                Intent i = new Intent(SetOneActivity.this,FeedbackActivity.class);
+        switch (item.getItemId()) {
+            case R.id.feedback:
+                Intent i = new Intent(SetOneActivity.this, FeedbackActivity.class);
                 startActivity(i);
                 return true;
         }
@@ -271,7 +265,13 @@ public class SetOneActivity extends AppCompatActivity {
             }
 
             //Displaying Score only if FIELDS are not EMPTY
-            score(points);
+            if (submitCount < 1) {
+                score(points);
+                submitCount++;
+                submitBTN.setEnabled(false);
+                submitBTN.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+                Log.i(LOG_TAG, "Submitted");
+            }
         } catch (Exception e) {
             Log.e(LOG_TAG, "Caused by Empty Fields");
             e.printStackTrace();
@@ -281,6 +281,7 @@ public class SetOneActivity extends AppCompatActivity {
 
     /**
      * Function to return the RadioValue
+     *
      * @param radios Passing RadioGroup to get the selected value
      * @return checked radio value
      */
@@ -290,6 +291,7 @@ public class SetOneActivity extends AppCompatActivity {
 
     /**
      * Function to return EditText Value
+     *
      * @param et Passing EditText whose value is to be obtained
      * @return EditText to String
      */
@@ -299,6 +301,7 @@ public class SetOneActivity extends AppCompatActivity {
 
     /**
      * Function to return Checked CheckBox
+     *
      * @param cb CheckBox
      * @return True if CheckBox is selected.
      */
@@ -315,8 +318,9 @@ public class SetOneActivity extends AppCompatActivity {
                 + getString(R.string.branch_score) + "\u0020" + branchString + "\n" + getString(R.string.set_score) + "\u0020"
                 + setString + "\n" + getString(R.string.attempts_score) + "\u0020" + attemptString +
                 "\n" + getString(R.string.title_score) + "\u0020" + points;
-        String result = "Team:" +teamString + " Att:" +attemptString + " Scr:" +points;
-        mDatabaseReference.push().setValue(result);
+        String result = "Team:" + teamString + " Att:" + attemptString + " Scr:" + points;
+        UserDetailsActivity.mDatabaseReferenceResult.push().setValue(result);
+        Log.i(LOG_TAG, "Score Updated in Db");
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_score)
                 .setMessage(dialogInfo)

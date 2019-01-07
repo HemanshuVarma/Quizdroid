@@ -1,7 +1,6 @@
 package com.varma.hemanshu.quizdroid;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -12,12 +11,13 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.varma.hemanshu.quizdroid.SetOneActivity.COUNT;
-import static com.varma.hemanshu.quizdroid.SetOneActivity.SHARED_PREF;
-import static com.varma.hemanshu.quizdroid.SetOneActivity.count;
+import static com.varma.hemanshu.quizdroid.UserDetailsActivity.COUNT;
+import static com.varma.hemanshu.quizdroid.UserDetailsActivity.SHARED_PREF;
+import static com.varma.hemanshu.quizdroid.UserDetailsActivity.count;
 
 public class SetThreeActivity extends AppCompatActivity {
 
+    private static final String LOG_TAG = SetThreeActivity.class.getSimpleName();
     @BindView(R.id.submit3_btn)
     Button submitBTN;
 
@@ -36,14 +36,6 @@ public class SetThreeActivity extends AppCompatActivity {
 
         //Setting up BindView
         ButterKnife.bind(this);
-
-        //Retrieving the Passed Values
-        Intent i = getIntent();
-        teamString = i.getStringExtra("TEAM_NO");
-        nameString = i.getStringExtra("NAME");
-        yearString = i.getStringExtra("YEAR");
-        branchString = i.getStringExtra("BRANCH");
-        setString = i.getStringExtra("SET");
 
         submitBTN.setOnClickListener(new View.OnClickListener() {
             @Override

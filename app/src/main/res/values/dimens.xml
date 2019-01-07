@@ -9,4 +9,6 @@
 
     <!--SP Values-->
     <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+    <dimen name="sp_36">36sp</dimen>
 </resources>

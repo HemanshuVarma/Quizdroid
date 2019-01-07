@@ -20,11 +20,12 @@
     <string name="feedback_text">How was your overall Experience?</string>
     <string name="suggestion">How can we improve it further</string>
     <string name="rating_tv">You rated : \u0020</string>
-    <string name="submission_prompt">Thank You for your Feedback!</string>
+    <string name="feedback_submit_success">Thank You for your Feedback!</string>
+    <string name="feedback_submit_failed">You\'ve already Responded</string>
 
     <!--Splash Activity Strings-->
-    <string name="event_name">Event Name</string>
-    <string name="round_name">Round Name</string>
+    <string name="event_name">Emblazon</string>
+    <string name="round_name">Androviden</string>
     <string name="mrits">Malla Reddy Institute of Technology and Science</string>
     <string name="csi">Computer Society of India</string>
     <string name="credits">Made with \u2764 by <b>TEAM CSI-MRITS</b></string>
@@ -35,15 +36,17 @@
     <string name="year">Year \u0020\u0020\u0020\u0020 :</string>
     <string name="branch">Branch :</string>
     <string name="set">Set \u0020\u0020\u0020\u0020\u0020\u0020 :</string>
+    <string name="read_instructions">Read the instructions first</string>
     <string name="instructions"><u>Read Instructions</u></string>
     <string name="lets_start">Let\'s Start</string>
-    <string name="empty_fields">All Answers Required!</string>
+    <string name="empty_fields">Oops! All Answers Required</string>
 
     <string-array name="array_branch">
         <item>CSE</item>
         <item>IT</item>
         <item>ECE</item>
         <item>CE</item>
+        <item>Other</item>
     </string-array>
 
     <string-array name="array_year">

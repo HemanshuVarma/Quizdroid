@@ -12,9 +12,6 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -36,9 +33,7 @@ public class FeedbackActivity extends AppCompatActivity {
     String feedbackString;
     String suggestionString;
     String ratedValue;
-
-    private FirebaseDatabase mFirebaseDatabase;
-    private DatabaseReference mDatabaseReference;
+    int submitCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +43,6 @@ public class FeedbackActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.feedback_title);
-
-        mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference = mFirebaseDatabase.getReference().child("feedback");
 
         submit_feedback.setEnabled(false);
         submit_feedback.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
@@ -89,10 +81,17 @@ public class FeedbackActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 suggestionString = suggestionET.getText().toString().trim();
-                String feedbackDb = "F: " + feedbackString + " S: " + suggestionString + " R: " + ratedValue;
-                mDatabaseReference.push().setValue(feedbackDb);
-                Toast.makeText(FeedbackActivity.this, getString(R.string.submission_prompt),
-                        Toast.LENGTH_SHORT).show();
+                String feedbackDb = "T:" + UserDetailsActivity.teamNo + " F:" + feedbackString +
+                        " S: " + suggestionString + " R:" + ratedValue;
+                if (submitCount < 2) {
+                    UserDetailsActivity.mDatabaseReferenceFeedback.push().setValue(feedbackDb);
+                    submitCount++;
+                    Toast.makeText(FeedbackActivity.this, getString(R.string.feedback_submit_success),
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(FeedbackActivity.this, getString(R.string.feedback_submit_failed),
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

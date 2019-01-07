@@ -5,13 +5,16 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,7 +24,6 @@ import butterknife.ButterKnife;
  * To get Basic Info of user.
  */
 public class UserDetailsActivity extends AppCompatActivity {
-
 
     @BindView(R.id.team_no_et)
     EditText teamEditText;
@@ -33,16 +35,28 @@ public class UserDetailsActivity extends AppCompatActivity {
     Spinner branchSpinner;
     @BindView(R.id.set_sv)
     Spinner setSpinner;
+    @BindView(R.id.instructions_cb)
+    CheckBox instructionsCheckbox;
     @BindView(R.id.instructions_tv)
     TextView instructionsTextView;
     @BindView(R.id.start_tv)
     Button startButton;
 
-    public String selectedBranch;
-    public String selectedYear;
-    public String teamNo;
-    public String userName;
-    public String selectedSet;
+    public static String teamNo;
+    public static String userName;
+    public static String selectedYear;
+    public static String selectedBranch;
+    public static String selectedSet;
+
+    //Shared Pref
+    public static final String SHARED_PREF = "Shared Pref";
+    public static final String COUNT = "Count";
+    public static int count;
+
+    //FireBase Instances
+    public static FirebaseDatabase mFirebaseDatabase;
+    public static DatabaseReference mDatabaseReferenceResult;
+    public static DatabaseReference mDatabaseReferenceFeedback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +64,10 @@ public class UserDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_details);
 
         ButterKnife.bind(this);
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReferenceResult = mFirebaseDatabase.getReference().child("result");
+        mDatabaseReferenceFeedback = mFirebaseDatabase.getReference().child("feedback");
 
         // Listener for Instructions TextView
         // Displays a Dialog with all the instructions and Ok Button in it.
@@ -69,7 +87,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isEmpty(teamEditText) && !isEmpty(nameEditText)) {
+                if (!isEmpty(teamEditText) && !isEmpty(nameEditText) && instructionsCheckbox.isChecked()) {
                     teamNo = teamEditText.getText().toString();
                     userName = nameEditText.getText().toString();
                     selectedBranch = branchSpinner.getSelectedItem().toString();
@@ -78,41 +96,30 @@ public class UserDetailsActivity extends AppCompatActivity {
                     switch (setSpinner.getSelectedItemPosition()) {
                         case 0:
                             Intent setOneIntent = new Intent(UserDetailsActivity.this, SetOneActivity.class);
-                            setOneIntent.putExtra("TEAM_NO", teamNo);
-                            setOneIntent.putExtra("NAME", userName);
-                            setOneIntent.putExtra("BRANCH", selectedBranch);
-                            setOneIntent.putExtra("YEAR", selectedYear);
-                            setOneIntent.putExtra("SET", selectedSet);
                             startActivity(setOneIntent);
                             Toast.makeText(UserDetailsActivity.this, R.string.set1, Toast.LENGTH_SHORT).show();
                             break;
                         case 1:
                             Intent setTwoIntent = new Intent(UserDetailsActivity.this, SetTwoActivity.class);
-                            setTwoIntent.putExtra("TEAM_NO", teamNo);
-                            setTwoIntent.putExtra("NAME", userName);
-                            setTwoIntent.putExtra("BRANCH", selectedBranch);
-                            setTwoIntent.putExtra("YEAR", selectedYear);
-                            setTwoIntent.putExtra("SET", selectedSet);
                             startActivity(setTwoIntent);
                             Toast.makeText(UserDetailsActivity.this, "SET 2", Toast.LENGTH_SHORT).show();
                             break;
                         case 2:
                             Intent setThreeIntent = new Intent(UserDetailsActivity.this, SetThreeActivity.class);
-                            setThreeIntent.putExtra("TEAM_NO", teamNo);
-                            setThreeIntent.putExtra("NAME", userName);
-                            setThreeIntent.putExtra("BRANCH", selectedBranch);
-                            setThreeIntent.putExtra("YEAR", selectedYear);
-                            setThreeIntent.putExtra("SET", selectedSet);
                             startActivity(setThreeIntent);
                             Toast.makeText(UserDetailsActivity.this, "SET 3", Toast.LENGTH_SHORT).show();
                             break;
                     }
                 } else {
-                    if (isEmpty(teamEditText)){
+                    if (isEmpty(teamEditText)) {
                         teamEditText.setError(getString(R.string.teamETError));
                     }
-                    if(isEmpty(nameEditText)){
+                    if (isEmpty(nameEditText)) {
                         nameEditText.setError(getString(R.string.nameETError));
+                    }
+                    if (!instructionsCheckbox.isChecked()) {
+                        Toast.makeText(UserDetailsActivity.this, getString(R.string.read_instructions),
+                                Toast.LENGTH_SHORT).show();
                     }
                 }
             }
