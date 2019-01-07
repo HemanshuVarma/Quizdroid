@@ -86,7 +86,7 @@
     <!--SET 1 QUESTIONS-->
     <string name="set1">SET 1</string>
     <string name="edit_text_hint">Answer here</string>
-    <string name="s1_que_1">When did the First version of Microsoft released?</string>
+    <string name="s1_que_1">When was the First version of Microsoft released?</string>
     <string name="s1_que1_r1">November 28, 1985</string>
     <string name="s1_que1_r2">January 28, 1985</string>
     <string name="s1_que1_r3">November 20, 1985</string>
@@ -96,32 +96,32 @@
     <string name="s1_que2_r2">39821k</string>
     <string name="s1_que2_r3">30023k</string>
 
-    <string name="s1_que_3">Is there <b>v1.01</b> computer have double-sided disk or not!</string>
+    <string name="s1_que_3">Do <b>v1.01</b> computer have double-sided disk or not?</string>
     <string name="s1_que3_r1">Yes</string>
     <string name="s1_que3_r2">No</string>
 
-    <string name="s1_que_4">What is command for <b>size</b> in windows version 2.0?</string>
+    <string name="s1_que_4">What is the command used for <b>size</b> in windows version 2.0?</string>
     <string name="s1_que4_ans">Alt+F8</string>
 
-    <string name="s1_que_5">Which is the First version were we can minimize and maximize window?</string>
+    <string name="s1_que_5">Which is the First version, Where we can minimize and maximize window?</string>
     <string name="s1_que5_r1">Windows 1.01</string>
     <string name="s1_que5_r2">Windows 10</string>
     <string name="s1_que5_r3">Windows 2.0</string>
 
-    <string name="s1_que_6">On May 22, 1990 which version of window released?</string>
+    <string name="s1_que_6">On May 22, 1990 which version of windows was released?</string>
     <string name="s1_que6_ans">Windows 3.0</string>
 
-    <string name="s1_que_7">What game created using v3.0 of windows?</string>
+    <string name="s1_que_7">What is the game created using v3.0 of windows?</string>
     <string name="s1_que7_r1">Revesi</string>
     <string name="s1_que7_r2">Sudoku</string>
     <string name="s1_que7_r3">Snake game</string>
 
-    <string name="s1_que_8">The storage files maintained in the Windows 3.0 will be in the form of?</string>
+    <string name="s1_que_8">The storage files which are maintained in the Windows 3.0 will be in the form of?</string>
     <string name="s1_que8_r1">Bits</string>
     <string name="s1_que8_r2">Bytes</string>
     <string name="s1_que8_r3">Docs</string>
 
-    <string name="s1_que_9">Which version of windows runs the programs in protected mode?</string>
+    <string name="s1_que_9">Which version of the windows runs the programs in protected mode?</string>
     <string name="s1_que9_ans">Windows 3.0</string>
 
     <string name="s1_que_10">Windows 3.1 was introduced on…?</string>
@@ -130,17 +130,17 @@
     <string name="s1_que10_r3">April 06 1992</string>
     <string name="s1_que10_r4">June 04 1991</string>
 
-    <string name="s1_que_11">In which drive all the programs are present in all versions of windows?</string>
+    <string name="s1_que_11">What is the default drive in which all the programs are installed?</string>
     <string name="s1_que11_r1">D Drive</string>
     <string name="s1_que11_r2">System Drive</string>
     <string name="s1_que11_r3">C Drive</string>
 
-    <string name="s1_que_12">To write a C-Program which editor is used in the version 3.2X?</string>
+    <string name="s1_que_12">Which editor is used to write a C-Program in the version 3.2X?</string>
     <string name="s1_que12_r1">Notepad</string>
-    <string name="s1_que12_r2">MSDOS</string>
+    <string name="s1_que12_r2">MS-DOS</string>
     <string name="s1_que12_r3">Command Prompt</string>
 
-    <string name="s1_que_13">On August 24, 1995 the version of window name is changed as?</string>
+    <string name="s1_que_13">On August 24, 1995 the version of windows name is changed as?</string>
     <string name="s1_que13_ans">Windows 95</string>
 
     <string name="s1_que_14">Which version of window can surf on the internet?</string>
@@ -148,10 +148,10 @@
     <string name="s1_que14_r2">Windows 95</string>
     <string name="s1_que14_r3">Windows 8</string>
 
-    <string name="s1_que_15">In which year Microsoft Windows98 is released?</string>
+    <string name="s1_que_15">In which year Microsoft Windows98 was released?</string>
     <string name="s1_que15_ans">July 25 1998</string>
 
-    <string name="s1_que_16">In Windows 98 we can change</string>
+    <string name="s1_que_16">In Windows 98, What can be changed?</string>
     <string name="s1_que16_cb1">Color</string>
     <string name="s1_que16_cb2">Background</string>
     <string name="s1_que16_cb3">Sound</string>
@@ -160,23 +160,23 @@
     <string name="s1_que_17">Which version of windows is called as the PC Mode?</string>
     <string name="s1_que17_ans">Windows 2000</string>
 
-    <string name="s1_que_18">What is the name of window version released in Sep 14, 2000?</string>
+    <string name="s1_que_18">Which version of windows was released on Sep 14, 2000?</string>
     <string name="s1_que18_r1">Windows 10</string>
     <string name="s1_que18_r2">Windows ME</string>
     <string name="s1_que18_r3">Windows XP</string>
 
-    <string name="s1_que_19">Windows 7 was released in the year?</string>
+    <string name="s1_que_19">In which year, Windows 7 was released?</string>
     <string name="s1_que19_r1">Oct 22, 2009</string>
     <string name="s1_que19_r2">Aug 22, 2005</string>
     <string name="s1_que19_r3">Sep 22, 2009</string>
 
-    <string name="s1_que_20">Windows 7 new features are advanced in</string>
+    <string name="s1_que_20">The advanced feature of Windows 7 is?</string>
     <string name="s1_que20_cb1">Touch</string>
     <string name="s1_que20_cb2">Handwriting recognition</string>
     <string name="s1_que20_cb3">Face recognition</string>
     <string name="s1_que20_cb4">Fingerprint recognition</string>
 
-    <string name="s1_que_21">Windows NT 4.0 was less user-friendly than Windows 95 in case of</string>
+    <string name="s1_que_21">In which case, Windows NT 4.0 was less user-friendly than Windows 95</string>
     <string name="s1_que21_cb1">Maintenance</string>
     <string name="s1_que21_cb2">Management tasks</string>
     <string name="s1_que21_cb3">Performance</string>
@@ -189,14 +189,127 @@
     <string name="s1_que_23">In Windows ME, ME stands for ?</string>
     <string name="s1_que23_ans">Millennium Edition</string>
 
-    <string name="s1_que_24">In which version of windows, authentication methods introduce?</string>
+    <string name="s1_que_24">In which version of windows, Authentication methods were introduce?</string>
     <string name="s1_que24_r1">Windows 10</string>
     <string name="s1_que24_r2">Windows 8</string>
     <string name="s1_que24_r3">Windows 7</string>
 
-    <string name="s1_que_25">When Windows10 was released?</string>
+    <string name="s1_que_25">When was Windows 10 was released?</string>
     <string name="s1_que25_r1">June 26, 2015</string>
     <string name="s1_que25_r2">July 29, 2016</string>
     <string name="s1_que25_r3">Sep 3, 2017</string>
 
+    <!--SET 2 QUESTIONS-->
+    <string name="set2">SET 2</string>
+    <string name="s2_que_1">What is the clock speed of intel 4004? </string>
+    <string name="s2_que1_r1">108\-720KHz</string>
+    <string name="s2_que1_r2">108\-740KHz</string>
+    <string name="s2_que1_r3">108\-720MHz</string>
+
+    <string name="s2_que_2">________ number of transistors are present in intel 4004.</string>
+    <string name="s2_que2_r1">2300</string>
+    <string name="s2_que2_r2">2500</string>
+    <string name="s2_que2_r3">3100</string>
+
+    <string name="s2_que_3">Intel 4004 consists of _____ number of bits.</string>
+    <string name="s2_que3_r1">4</string>
+    <string name="s2_que3_r2">5</string>
+    <string name="s2_que3_r3">3</string>
+
+    <string name="s2_que_4">Intel 8008 was introduced in the year?</string>
+    <string name="s2_que4_r1">1973</string>
+    <string name="s2_que4_r2">1972</string>
+    <string name="s2_que4_r3">1974</string>
+
+    <string name="s2_que_5">Intel 8008 has _____ number of transistors.</string>
+    <string name="s2_que5_r1">3300</string>
+    <string name="s2_que5_r2">3500</string>
+    <string name="s2_que5_r3">3600</string>
+
+    <string name="s2_que_6">The ______ is the Intel\'s first 8-bit processor.</string>
+    <string name="s2_que6_ans">Intel 8008</string>
+
+    <string name="s2_que_7">Clock speed of intel 8080 is ____.</string>
+    <string name="s2_que7_r1">2KHz</string>
+    <string name="s2_que7_r2">2MHz</string>
+    <string name="s2_que7_r3">3MHz</string>
+
+    <string name="s2_que_8">First successful computer is based on </string>
+    <string name="s2_que8_r1">intel 4004</string>
+    <string name="s2_que8_r2">intel 8008</string>
+    <string name="s2_que8_r3">intel 8080</string>
+
+    <string name="s2_que_9">The clock speed of Intel 8088 is _____</string>
+    <string name="s2_que9_ans">5MHz</string>
+
+    <string name="s2_que_10">Manufacturing technology of 8080 is ______microns</string>
+    <string name="s2_que10_r1">4</string>
+    <string name="s2_que10_r2">5</string>
+    <string name="s2_que10_r3">6</string>
+
+    <string name="s2_que_11">Intel 8088 was introduced in the year?</string>
+    <string name="s2_que11_r1">1977</string>
+    <string name="s2_que11_r2">1974</string>
+    <string name="s2_que11_r3">1979</string>
+
+    <string name="s2_que_12">What is the clock speed of intel 286?</string>
+    <string name="s2_que12_r1">7MHz</string>
+    <string name="s2_que12_r2">6MHz</string>
+    <string name="s2_que12_r3">5MHz</string>
+
+    <string name="s2_que_13">Which intel is dubbed as "brain dead chip"_______</string>
+    <string name="s2_que13_ans">Intel 286</string>
+
+    <string name="s2_que_14">Intel Pentium has _______ million transistors</string>
+    <string name="s2_que14_r1">1.3</string>
+    <string name="s2_que14_r2">2.3</string>
+    <string name="s2_que14_r3">3.1</string>
+
+    <string name="s2_que_15">The original name of Intel Pentium is _______</string>
+    <string name="s2_que15_ans">Intel 586</string>
+
+    <string name="s2_que_16">Choose the correct statements</string>
+    <string name="s2_que16_cb1">4004 is intel’s first microprocessor</string>
+    <string name="s2_que16_cb2">4004 is 8-bit type</string>
+    <string name="s2_que16_cb3">8008 is intel’s first 8-bit microprocessor</string>
+    <string name="s2_que16_cb4">clock speed of 8008 is 108\-740KHz</string>
+
+    <string name="s2_que_17">Intel pentium is introduced in the year ______</string>
+    <string name="s2_que17_ans">1997</string>
+
+    <string name="s2_que_18">Is intel Pentium pro was designed for server and workstation applications?</string>
+    <string name="s2_que18_r1">Yes</string>
+    <string name="s2_que18_r2">No</string>
+
+    <string name="s2_que_19">Intel Pentium 111 and intel Pentium 4 has manufacturing technology of _____ microns respectively</string>
+    <string name="s2_que19_r1">0.25 and 0.18</string>
+    <string name="s2_que19_r2">0.025 and 0.0025</string>
+    <string name="s2_que19_r3">0.18 and 0.25</string>
+
+    <string name="s2_que_20">Which of the following statements are correct?</string>
+    <string name="s2_que20_cb1">Manufacturing technology of 8080 is 3 microns</string>
+    <string name="s2_que20_cb2">Manufacturing technology of 8080 is 2 microns</string>
+    <string name="s2_que20_cb3">Manufacturing technology of 8080 is 6 microns</string>
+
+    <string name="s2_que_21">Which among the following is true for intel 386.</string>
+    <string name="s2_que21_cb1">it is 32bit single core</string>
+    <string name="s2_que21_cb2">it has 27500 transistors</string>
+    <string name="s2_que21_cb3">clock speed is 16MHz</string>
+    <string name="s2_que21_cb4">manufacturing technologies is 1.5 microns</string>
+
+    <string name="s2_que_22">Choose the correct statements for intel 486.</string>
+    <string name="s2_que22_cb1">32bit</string>
+    <string name="s2_que22_cb2">clock speed of 25MHz</string>
+    <string name="s2_que22_cb3">20million transistors</string>
+
+    <string name="s2_que_23">From which year does Intel began to adopt its tick-tok model processor improvement______</string>
+    <string name="s2_que23_ans">2007</string>
+
+    <string name="s2_que_24">In which year was the intel atom established?</string>
+    <string name="s2_que24_r1">2007</string>
+    <string name="s2_que24_r2">2008</string>
+    <string name="s2_que24_r3">2006</string>
+
+    <string name="s2_que_25">Number of transistors in Intel atom</string>
+    <string name="s2_que25_ans">47 million</string>
 </resources>

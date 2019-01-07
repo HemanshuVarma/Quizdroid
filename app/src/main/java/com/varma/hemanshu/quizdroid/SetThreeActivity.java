@@ -1,10 +1,15 @@
 package com.varma.hemanshu.quizdroid;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +23,8 @@ import static com.varma.hemanshu.quizdroid.UserDetailsActivity.count;
 public class SetThreeActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = SetThreeActivity.class.getSimpleName();
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     @BindView(R.id.submit3_btn)
     Button submitBTN;
 
@@ -37,12 +44,47 @@ public class SetThreeActivity extends AppCompatActivity {
         //Setting up BindView
         ButterKnife.bind(this);
 
+        //Accessing Data from UserDetailsActivity
+        teamString = UserDetailsActivity.teamNo;
+        nameString = UserDetailsActivity.userName;
+        yearString = UserDetailsActivity.selectedYear;
+        branchString = UserDetailsActivity.selectedBranch;
+        setString = UserDetailsActivity.selectedSet;
+
+        String title = getString(R.string.title_team) + teamString;
+        try {
+            if (toolbar != null) {
+                setSupportActionBar(toolbar);
+                getSupportActionBar().setLogo(R.drawable.csi_logo_india);
+                getSupportActionBar().setTitle(title);
+            }
+        } catch (Exception e) {
+            Log.v(LOG_TAG, "Toolbar inflated");
+        }
+
         submitBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                score();
+                score(2);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.quiz_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.feedback:
+                Intent i = new Intent(SetThreeActivity.this, FeedbackActivity.class);
+                startActivity(i);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -91,6 +133,24 @@ public class SetThreeActivity extends AppCompatActivity {
                 .setPositiveButton(android.R.string.yes, null).create().show();
     }
 
+
+    /**
+     * To display the score in Dialog when Submit Button is clicked.
+     */
+    private void score(int points) {
+        dialogInfo = getString(R.string.team_score) + "\u0020" + teamString + "\n" + getString(R.string.name_score) + "\u0020"
+                + nameString + "\n" + getString(R.string.year_score) + "\u0020" + yearString + "\n"
+                + getString(R.string.branch_score) + "\u0020" + branchString + "\n" + getString(R.string.set_score) + "\u0020"
+                + setString + "\n" + getString(R.string.attempts_score) + "\u0020" + attemptString +
+                "\n" + getString(R.string.title_score) + "\u0020" + points;
+        String result = "Team:" + teamString + " Att:" + attemptString + " Scr:" + points;
+        UserDetailsActivity.mDatabaseReferenceResult.push().setValue(result);
+        Log.i(LOG_TAG, "Score Updated in Db");
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.title_score)
+                .setMessage(dialogInfo)
+                .setPositiveButton(R.string.close, null).create().show();
+    }
 
     /**
      * System Method when Back button is pressed
