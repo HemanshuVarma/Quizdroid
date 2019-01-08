@@ -104,11 +104,6 @@ public class UserDetailsActivity extends AppCompatActivity {
                             startActivity(setTwoIntent);
                             Toast.makeText(UserDetailsActivity.this, R.string.set2, Toast.LENGTH_SHORT).show();
                             break;
-                        case 2:
-                            Intent setThreeIntent = new Intent(UserDetailsActivity.this, SetThreeActivity.class);
-                            startActivity(setThreeIntent);
-                            Toast.makeText(UserDetailsActivity.this, "SET 3", Toast.LENGTH_SHORT).show();
-                            break;
                     }
                 } else {
                     if (isEmpty(teamEditText)) {

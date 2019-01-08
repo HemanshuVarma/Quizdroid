@@ -24,10 +24,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_1" />
+                    android:text="@string/s2_que_1" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que1_radios"
+                    android:id="@+id/s2_que1_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -36,19 +36,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que1_r1" />
+                        android:text="@string/s2_que1_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que1_r2" />
+                        android:text="@string/s2_que1_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que1_r3" />
+                        android:text="@string/s2_que1_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que1_r4" />
 
                 </RadioGroup>
 
@@ -72,10 +78,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_2" />
+                    android:text="@string/s2_que_2" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que2_radios"
+                    android:id="@+id/s2_que2_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -84,19 +90,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que2_r1" />
+                        android:text="@string/s2_que2_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que2_r2" />
+                        android:text="@string/s2_que2_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que2_r3" />
+                        android:text="@string/s2_que2_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que2_r4" />
 
                 </RadioGroup>
 
@@ -120,27 +132,14 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_3" />
+                    android:text="@string/s2_que_3" />
 
-                <RadioGroup
-                    android:id="@+id/s1_que3_radios"
+                <EditText
+                    android:id="@+id/s2_que3_et"
+                    style="@style/AppTheme.EditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/dips_8">
-
-                    <RadioButton
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que3_r1" />
-
-                    <RadioButton
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que3_r2" />
-
-                </RadioGroup>
+                    android:inputType="textCapWords" />
 
             </LinearLayout>
 
@@ -162,14 +161,39 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_4" />
+                    android:text="@string/s2_que_4" />
 
-                <EditText
-                    android:id="@+id/s1_que4_et"
-                    style="@style/AppTheme.EditTextStyle"
+                <RadioGroup
+                    android:id="@+id/s2_que4_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords" />
+                    android:padding="@dimen/dips_8">
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que4_r1" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que4_r2" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que4_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que4_r4" />
+
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -191,33 +215,40 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_5" />
+                    android:text="@string/s2_que_5" />
 
-                <RadioGroup
-                    android:id="@+id/s1_que5_radios"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:padding="@dimen/dips_8">
 
-                    <RadioButton
+                    <CheckBox
+                        android:id="@+id/s2_que5_cb1"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que5_r1" />
+                        android:text="@string/s2_que5_cb1" />
 
-                    <RadioButton
+                    <CheckBox
+                        android:id="@+id/s2_que5_cb2"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que5_r2" />
+                        android:text="@string/s2_que5_cb2" />
 
-                    <RadioButton
+                    <CheckBox
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que5_r3" />
+                        android:text="@string/s2_que5_cb3" />
 
-                </RadioGroup>
+                    <CheckBox
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que5_cb4" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -239,10 +270,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_6" />
+                    android:text="@string/s2_que_6" />
 
                 <EditText
-                    android:id="@+id/s1_que6_et"
+                    android:id="@+id/s2_que6_et"
                     style="@style/AppTheme.EditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -268,10 +299,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_7" />
+                    android:text="@string/s2_que_7" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que7_radios"
+                    android:id="@+id/s2_que7_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -280,19 +311,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que7_r1" />
+                        android:text="@string/s2_que7_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que7_r2" />
+                        android:text="@string/s2_que7_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que7_r3" />
+                        android:text="@string/s2_que7_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que7_r4" />
 
                 </RadioGroup>
 
@@ -316,10 +353,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_8" />
+                    android:text="@string/s2_que_8" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que8_radios"
+                    android:id="@+id/s2_que8_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -328,19 +365,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que8_r1" />
+                        android:text="@string/s2_que8_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que8_r2" />
+                        android:text="@string/s2_que8_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que8_r3" />
+                        android:text="@string/s2_que8_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que8_r4" />
 
                 </RadioGroup>
 
@@ -364,10 +407,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_9" />
+                    android:text="@string/s2_que_9" />
 
                 <EditText
-                    android:id="@+id/s1_que9_et"
+                    android:id="@+id/s2_que9_et"
                     style="@style/AppTheme.EditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -393,10 +436,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_10" />
+                    android:text="@string/s2_que_10" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que10_radios"
+                    android:id="@+id/s2_que10_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -405,25 +448,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que10_r1" />
+                        android:text="@string/s2_que10_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que10_r2" />
+                        android:text="@string/s2_que10_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que10_r3" />
+                        android:text="@string/s2_que10_r3" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que10_r4" />
+                        android:text="@string/s2_que10_r4" />
 
                 </RadioGroup>
 
@@ -447,33 +490,40 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_11" />
+                    android:text="@string/s2_que_11" />
 
-                <RadioGroup
-                    android:id="@+id/s1_que11_radios"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:padding="@dimen/dips_8">
 
-                    <RadioButton
+                    <CheckBox
+                        android:id="@+id/s2_que11_cb1"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que11_r1" />
+                        android:text="@string/s2_que11_cb1" />
 
-                    <RadioButton
+                    <CheckBox
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que11_r2" />
+                        android:text="@string/s2_que11_cb2" />
 
-                    <RadioButton
+                    <CheckBox
+                        android:id="@+id/s2_que11_cb3"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que11_r3" />
+                        android:text="@string/s2_que11_cb3" />
 
-                </RadioGroup>
+                    <CheckBox
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que11_cb4" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -495,10 +545,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_12" />
+                    android:text="@string/s2_que_12" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que12_radios"
+                    android:id="@+id/s2_que12_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -507,19 +557,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que12_r1" />
+                        android:text="@string/s2_que12_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que12_r2" />
+                        android:text="@string/s2_que12_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que12_r3" />
+                        android:text="@string/s2_que12_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que12_r4" />
 
                 </RadioGroup>
 
@@ -543,14 +599,39 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_13" />
+                    android:text="@string/s2_que_13" />
 
-                <EditText
-                    android:id="@+id/s1_que13_et"
-                    style="@style/AppTheme.EditTextStyle"
+                <RadioGroup
+                    android:id="@+id/s2_que13_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords" />
+                    android:padding="@dimen/dips_8">
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que13_r1" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que13_r2" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que13_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que13_r4" />
+
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -572,10 +653,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_14" />
+                    android:text="@string/s2_que_14" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que14_radios"
+                    android:id="@+id/s2_que14_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -584,19 +665,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que14_r1" />
+                        android:text="@string/s2_que14_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que14_r2" />
+                        android:text="@string/s2_que14_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que14_r3" />
+                        android:text="@string/s2_que14_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que14_r4" />
 
                 </RadioGroup>
 
@@ -620,10 +707,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_15" />
+                    android:text="@string/s2_que_15" />
 
                 <EditText
-                    android:id="@+id/s1_que15_et"
+                    android:id="@+id/s2_que15_et"
                     style="@style/AppTheme.EditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -649,40 +736,14 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_16" />
+                    android:text="@string/s2_que_16" />
 
-                <LinearLayout
+                <EditText
+                    android:id="@+id/s2_que16_et"
+                    style="@style/AppTheme.EditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/dips_8">
-
-                    <CheckBox
-                        android:id="@+id/s1_que16_cb1"
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que16_cb1" />
-
-                    <CheckBox
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que16_cb2" />
-
-                    <CheckBox
-                        android:id="@+id/s1_que16_cb3"
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que16_cb3" />
-
-                    <CheckBox
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que16_cb4" />
-                </LinearLayout>
+                    android:inputType="textCapWords" />
 
             </LinearLayout>
 
@@ -704,14 +765,39 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_17" />
+                    android:text="@string/s2_que_17" />
 
-                <EditText
-                    android:id="@+id/s1_que17_et"
-                    style="@style/AppTheme.EditTextStyle"
+                <RadioGroup
+                    android:id="@+id/s2_que17_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords" />
+                    android:padding="@dimen/dips_8">
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que17_r1" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que17_r2" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que17_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que17_r4" />
+
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -733,10 +819,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_18" />
+                    android:text="@string/s2_que_18" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que18_radios"
+                    android:id="@+id/s2_que18_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -745,19 +831,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que18_r1" />
+                        android:text="@string/s2_que18_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que18_r2" />
+                        android:text="@string/s2_que18_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que18_r3" />
+                        android:text="@string/s2_que18_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que18_r4" />
 
                 </RadioGroup>
 
@@ -781,33 +873,40 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_19" />
+                    android:text="@string/s2_que_19" />
 
-                <RadioGroup
-                    android:id="@+id/s1_que19_radios"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:padding="@dimen/dips_8">
 
-                    <RadioButton
+                    <CheckBox
+                        android:id="@+id/s2_que19_cb1"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que19_r1" />
+                        android:text="@string/s2_que19_cb1" />
 
-                    <RadioButton
+                    <CheckBox
+                        android:id="@+id/s2_que19_cb2"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que19_r2" />
+                        android:text="@string/s2_que19_cb2" />
 
-                    <RadioButton
+                    <CheckBox
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que19_r3" />
+                        android:text="@string/s2_que19_cb3" />
 
-                </RadioGroup>
+                    <CheckBox
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que19_cb4" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -829,7 +928,7 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_20" />
+                    android:text="@string/s2_que_20" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -838,30 +937,30 @@
                     android:padding="@dimen/dips_8">
 
                     <CheckBox
-                        android:id="@+id/s1_que20_cb1"
+                        android:id="@+id/s2_que20_cb1"
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que20_cb1" />
-
-                    <CheckBox
-                        android:id="@+id/s1_que20_cb2"
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que20_cb2" />
+                        android:text="@string/s2_que20_cb1" />
 
                     <CheckBox
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que20_cb3" />
+                        android:text="@string/s2_que20_cb2" />
 
                     <CheckBox
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que20_cb4" />
+                        android:text="@string/s2_que20_cb3" />
+
+                    <CheckBox
+                        android:id="@+id/s2_que20_cb4"
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que20_cb4" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -884,35 +983,14 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_21" />
+                    android:text="@string/s2_que_21" />
 
-                <LinearLayout
+                <EditText
+                    android:id="@+id/s2_que21_et"
+                    style="@style/AppTheme.EditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/dips_8">
-
-                    <CheckBox
-                        android:id="@+id/s1_que21_cb1"
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que21_cb1" />
-
-                    <CheckBox
-                        android:id="@+id/s1_que21_cb2"
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que21_cb2" />
-
-                    <CheckBox
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que21_cb3" />
-
-                </LinearLayout>
+                    android:inputType="textCapWords" />
 
             </LinearLayout>
 
@@ -934,35 +1012,27 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_22" />
+                    android:text="@string/s2_que_22" />
 
-                <LinearLayout
+                <RadioGroup
+                    android:id="@+id/s2_que22_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:padding="@dimen/dips_8">
 
-                    <CheckBox
-                        android:id="@+id/s1_que22_cb1"
+                    <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que22_cb1" />
+                        android:text="@string/s2_que22_r1" />
 
-                    <CheckBox
-                        android:id="@+id/s1_que22_cb2"
+                    <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que22_cb2" />
+                        android:text="@string/s2_que22_r2" />
 
-                    <CheckBox
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que22_cb3" />
-
-                </LinearLayout>
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -984,39 +1054,10 @@
                     style="@style/AppTheme.TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/s1_que_23" />
-
-                <EditText
-                    android:id="@+id/s1_que23_et"
-                    style="@style/AppTheme.EditTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textCapWords" />
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <!--QUESTION 24 HERE-->
-        <android.support.v7.widget.CardView
-            style="@style/AppTheme.MarginType1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="@dimen/dips_8">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/AppTheme.TextViewStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/s1_que_24" />
+                    android:text="@string/s2_que_23" />
 
                 <RadioGroup
-                    android:id="@+id/s1_que24_radios"
+                    android:id="@+id/s2_que23_radios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dips_8">
@@ -1025,67 +1066,25 @@
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que24_r1" />
+                        android:text="@string/s2_que23_r1" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que24_r2" />
+                        android:text="@string/s2_que23_r2" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que24_r3" />
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <!--QUESTION 25 HERE-->
-        <android.support.v7.widget.CardView
-            style="@style/AppTheme.MarginType1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="@dimen/dips_8">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/AppTheme.TextViewStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/s1_que_25" />
-
-                <RadioGroup
-                    android:id="@+id/s1_que25_radios"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/dips_8">
+                        android:text="@string/s2_que23_r3" />
 
                     <RadioButton
                         style="@style/AppTheme.RadioStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/s1_que25_r1" />
-
-                    <RadioButton
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que25_r2" />
-
-                    <RadioButton
-                        style="@style/AppTheme.RadioStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s1_que25_r3" />
+                        android:text="@string/s2_que23_r4" />
 
                 </RadioGroup>
 
@@ -1093,5 +1092,4 @@
 
         </android.support.v7.widget.CardView>
     </LinearLayout>
-
 </ScrollView>

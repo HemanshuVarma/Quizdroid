@@ -12,6 +12,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +29,9 @@ public class SetTwoActivity extends AppCompatActivity {
     private static final String LOG_TAG = SetTwoActivity.class.getSimpleName();
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.s2_que1_radios)
+    RadioGroup que1;
+
 
     //Linking Submit Button
     @BindView(R.id.submit2_btn)
@@ -119,6 +126,36 @@ public class SetTwoActivity extends AppCompatActivity {
     public void loadData() {
         SharedPreferences mySharedPref = getSharedPreferences(SHARED_PREF, MODE_PRIVATE);
         count = mySharedPref.getInt(COUNT, 0);
+    }
+
+    /**
+     * Function to return the RadioValue
+     *
+     * @param radios Passing RadioGroup to get the selected value
+     * @return checked radio value
+     */
+    private String getRadioValue(RadioGroup radios) {
+        return ((RadioButton) findViewById(radios.getCheckedRadioButtonId())).getText().toString();
+    }
+
+    /**
+     * Function to return EditText Value
+     *
+     * @param et Passing EditText whose value is to be obtained
+     * @return EditText to String
+     */
+    private String getEditTextValue(EditText et) {
+        return et.getText().toString().trim();
+    }
+
+    /**
+     * Function to return Checked CheckBox
+     *
+     * @param cb CheckBox
+     * @return True if CheckBox is selected.
+     */
+    private boolean getCheckBoxStatus(CheckBox cb) {
+        return cb.isChecked();
     }
 
     /**

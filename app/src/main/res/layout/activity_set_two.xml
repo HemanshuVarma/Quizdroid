@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_above="@id/submit2_btn">
 
-            <include layout="@layout/activity_ques_set1" />
+            <include layout="@layout/activity_ques_set2" />
 
         </ScrollView>
 
