@@ -265,11 +265,13 @@ public class SetOneActivity extends AppCompatActivity {
             }
 
             //Displaying Score only if FIELDS are not EMPTY
-            if (submitCount < 1) {
+            if (submitCount < 2) {
                 score(points);
                 submitCount++;
-                submitBTN.setEnabled(false);
-                submitBTN.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+                if (submitCount == 2) {
+                    submitBTN.setEnabled(false);
+                    submitBTN.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+                }
                 Log.i(LOG_TAG, "Submitted");
             }
         } catch (Exception e) {
@@ -319,7 +321,9 @@ public class SetOneActivity extends AppCompatActivity {
                 + setString + "\n" + getString(R.string.attempts_score) + "\u0020" + attemptString +
                 "\n" + getString(R.string.title_score) + "\u0020" + points;
         String result = "Team:" + teamString + " Att:" + attemptString + " Scr:" + points;
-        UserDetailsActivity.mDatabaseReferenceResult.push().setValue(result);
+        if (submitCount < 1) {
+            UserDetailsActivity.mDatabaseReferenceResult.push().setValue(result);
+        }
         Log.i(LOG_TAG, "Score Updated in Db");
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_score)

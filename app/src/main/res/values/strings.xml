@@ -15,6 +15,7 @@
     <string name="nameETError">Name Required</string>
     <string name="required">Required</string>
     <string name="title_team"> Team \u0020</string>
+    <string name="good_luck">Good Luck!</string>
     <string name="feedback_title">Feedback</string>
     <string name="rating">Rate Us</string>
     <string name="feedback_text">How was your overall Experience?</string>
@@ -83,7 +84,6 @@
     <string name="attempts_score"><b>Attempts :</b></string>
 
     <!--SET 1 QUESTIONS-->
-    <string name="set1">SET 1</string>
     <string name="edit_text_hint">Answer here</string>
     <string name="s1_que_1">When was the First version of Microsoft released?</string>
     <string name="s1_que1_r1">November 28, 1985</string>
@@ -199,7 +199,6 @@
     <string name="s1_que25_r3">Sep 3, 2017</string>
 
     <!--SET 2-->
-    <string name="set2">SET 2</string>
     <string name="s2_que_1">Artificial intelligence have ethical and moral rights?</string>
     <string name="s2_que1_r1">Yes</string>
     <string name="s2_que1_r2">No</string>
@@ -312,7 +311,7 @@
     <string name="s2_que_21">First vacuum cleaner was designed in the year</string>
     <string name="s2_que21_ans">2002</string>
 
-    <string name="s2_que_22">who transfers their innernost thoughts to Android?</string>
+    <string name="s2_que_22">who transfers their innermost thoughts to Android?</string>
     <string name="s2_que22_r1">Robots</string>
     <string name="s2_que22_r2">Human</string>
 
@@ -321,4 +320,14 @@
     <string name="s2_que23_r2">Ruin some people\'s lives</string>
     <string name="s2_que23_r3">They are more talented</string>
     <string name="s2_que23_r4">None of the above</string>
+
+    <string name="s2_que_24">Which of the following field uses of A.I</string>
+    <string name="s2_que24_r1">Construction</string>
+    <string name="s2_que24_r2">Education</string>
+    <string name="s2_que24_r3">Both a and b</string>
+    <string name="s2_que24_r4">None of the above</string>
+
+    <string name="s2_que_25">_____ is the advancement of Machine Learning?</string>
+    <string name="s2_que25_ans">Artificial Intelligence</string>
+
 </resources>

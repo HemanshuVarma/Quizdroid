@@ -1091,5 +1091,89 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
+        <!--QUESTION 24 HERE-->
+        <android.support.v7.widget.CardView
+            style="@style/AppTheme.MarginType1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dips_8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AppTheme.TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s2_que_10" />
+
+                <RadioGroup
+                    android:id="@+id/s2_que24_radios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dips_8">
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que24_r1" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que24_r2" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que24_r3" />
+
+                    <RadioButton
+                        style="@style/AppTheme.RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s2_que24_r4" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--QUESTION 25 HERE-->
+        <android.support.v7.widget.CardView
+            style="@style/AppTheme.MarginType1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dips_8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AppTheme.TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s2_que_25" />
+
+                <EditText
+                    android:id="@+id/s2_que25_et"
+                    style="@style/AppTheme.EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
     </LinearLayout>
 </ScrollView>

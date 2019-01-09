@@ -97,12 +97,12 @@ public class UserDetailsActivity extends AppCompatActivity {
                         case 0:
                             Intent setOneIntent = new Intent(UserDetailsActivity.this, SetOneActivity.class);
                             startActivity(setOneIntent);
-                            Toast.makeText(UserDetailsActivity.this, R.string.set1, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UserDetailsActivity.this, R.string.good_luck, Toast.LENGTH_SHORT).show();
                             break;
                         case 1:
                             Intent setTwoIntent = new Intent(UserDetailsActivity.this, SetTwoActivity.class);
                             startActivity(setTwoIntent);
-                            Toast.makeText(UserDetailsActivity.this, R.string.set2, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UserDetailsActivity.this, R.string.good_luck, Toast.LENGTH_SHORT).show();
                             break;
                     }
                 } else {

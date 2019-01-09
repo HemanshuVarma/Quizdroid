@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,7 +32,62 @@ public class SetTwoActivity extends AppCompatActivity {
     Toolbar toolbar;
     @BindView(R.id.s2_que1_radios)
     RadioGroup que1;
-
+    @BindView(R.id.s2_que2_radios)
+    RadioGroup que2;
+    @BindView(R.id.s2_que3_et)
+    EditText que3;
+    @BindView(R.id.s2_que4_radios)
+    RadioGroup que4;
+    @BindView(R.id.s2_que5_cb1)
+    CheckBox que5_1;
+    @BindView(R.id.s2_que5_cb2)
+    CheckBox que5_2;
+    @BindView(R.id.s2_que6_et)
+    EditText que6;
+    @BindView(R.id.s2_que7_radios)
+    RadioGroup que7;
+    @BindView(R.id.s2_que8_radios)
+    RadioGroup que8;
+    @BindView(R.id.s2_que9_et)
+    EditText que9;
+    @BindView(R.id.s2_que10_radios)
+    RadioGroup que10;
+    @BindView(R.id.s2_que11_cb1)
+    CheckBox que11_1;
+    @BindView(R.id.s2_que11_cb3)
+    CheckBox que11_2;
+    @BindView(R.id.s2_que12_radios)
+    RadioGroup que12;
+    @BindView(R.id.s2_que13_radios)
+    RadioGroup que13;
+    @BindView(R.id.s2_que14_radios)
+    RadioGroup que14;
+    @BindView(R.id.s2_que15_et)
+    EditText que15;
+    @BindView(R.id.s2_que16_et)
+    EditText que16;
+    @BindView(R.id.s2_que17_radios)
+    RadioGroup que17;
+    @BindView(R.id.s2_que18_radios)
+    RadioGroup que18;
+    @BindView(R.id.s2_que19_cb1)
+    CheckBox que19_1;
+    @BindView(R.id.s2_que19_cb2)
+    CheckBox que19_2;
+    @BindView(R.id.s2_que20_cb1)
+    CheckBox que20_1;
+    @BindView(R.id.s2_que20_cb4)
+    CheckBox que20_2;
+    @BindView(R.id.s2_que21_et)
+    EditText que21;
+    @BindView(R.id.s2_que22_radios)
+    RadioGroup que22;
+    @BindView(R.id.s2_que23_radios)
+    RadioGroup que23;
+    @BindView(R.id.s2_que24_radios)
+    RadioGroup que24;
+    @BindView(R.id.s2_que25_et)
+    EditText que25;
 
     //Linking Submit Button
     @BindView(R.id.submit2_btn)
@@ -44,6 +100,7 @@ public class SetTwoActivity extends AppCompatActivity {
     String setString;
     String attemptString;
     String dialogInfo;
+    int submitCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +130,7 @@ public class SetTwoActivity extends AppCompatActivity {
 
         submitBTN.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                score(2);
+            public void onClick(View v) { evaluateQuiz();
             }
         });
     }
@@ -128,6 +184,104 @@ public class SetTwoActivity extends AppCompatActivity {
         count = mySharedPref.getInt(COUNT, 0);
     }
 
+    // Evaluation is done out of 57 POINTS.
+    // 1 for Radio, 5 for EditText, 2 for CheckBox
+    private void evaluateQuiz() {
+        int points = 0;
+        try {
+            if (getRadioValue(que1).equalsIgnoreCase(getString(R.string.s2_que1_r2))) {
+                points++;
+            }
+            if (getRadioValue(que2).equalsIgnoreCase(getString(R.string.s2_que2_r1))) {
+                points++;
+            }
+            if (getEditTextValue(que3).equalsIgnoreCase(getString(R.string.s2_que3_ans))) {
+                points += 5;
+            }
+            if (getRadioValue(que4).equalsIgnoreCase(getString(R.string.s2_que4_r3))) {
+                points++;
+            }
+            if (getCheckBoxStatus(que5_1) && getCheckBoxStatus(que5_2)) {
+                points += 2;
+            }
+            if (getEditTextValue(que6).equalsIgnoreCase(getString(R.string.s2_que6_ans))) {
+                points += 5;
+            }
+            if (getRadioValue(que7).equalsIgnoreCase(getString(R.string.s2_que7_r1))) {
+                points++;
+            }
+            if (getRadioValue(que8).equalsIgnoreCase(getString(R.string.s2_que8_r2))) {
+                points++;
+            }
+            if (getEditTextValue(que9).equalsIgnoreCase(getString(R.string.s2_que9_ans))) {
+                points += 5;
+            }
+            if (getRadioValue(que10).equalsIgnoreCase(getString(R.string.s2_que10_r3))) {
+                points++;
+            }
+            if (getCheckBoxStatus(que11_1) && getCheckBoxStatus(que11_2)) {
+                points += 2;
+            }
+            if (getRadioValue(que12).equalsIgnoreCase(getString(R.string.s2_que12_r2))) {
+                points++;
+            }
+            if (getRadioValue(que13).equalsIgnoreCase(getString(R.string.s2_que13_r1))) {
+                points++;
+            }
+            if (getRadioValue(que14).equalsIgnoreCase(getString(R.string.s2_que14_r4))) {
+                points++;
+            }
+            if (getEditTextValue(que15).equalsIgnoreCase(getString(R.string.s2_que15_ans))) {
+                points += 5;
+            }
+            if (getEditTextValue(que16).equalsIgnoreCase(getString(R.string.s2_que16_ans))) {
+                points += 5;
+            }
+            if (getRadioValue(que17).equalsIgnoreCase(getString(R.string.s2_que17_r4))) {
+                points++;
+            }
+            if (getRadioValue(que18).equalsIgnoreCase(getString(R.string.s2_que18_r2))) {
+                points++;
+            }
+            if (getCheckBoxStatus(que19_1) && getCheckBoxStatus(que19_2)) {
+                points += 2;
+            }
+            if (getCheckBoxStatus(que20_1) && getCheckBoxStatus(que20_2)) {
+                points += 2;
+            }
+            if (getEditTextValue(que21).equalsIgnoreCase(getString(R.string.s2_que21_ans))) {
+                points += 5;
+            }
+            if (getRadioValue(que22).equalsIgnoreCase(getString(R.string.s2_que22_r2))) {
+                points++;
+            }
+            if (getRadioValue(que23).equalsIgnoreCase(getString(R.string.s2_que23_r2))) {
+                points++;
+            }
+            if (getRadioValue(que24).equalsIgnoreCase(getString(R.string.s2_que24_r2))) {
+                points++;
+            }
+            if (getEditTextValue(que25).equalsIgnoreCase(getString(R.string.s2_que25_ans))) {
+                points += 5;
+            }
+
+            //Displaying Score only if FIELDS are not EMPTY
+            if (submitCount < 2) {
+                score(points);
+                submitCount++;
+                if (submitCount == 2) {
+                    submitBTN.setEnabled(false);
+                    submitBTN.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+                }
+                Log.i(LOG_TAG, "Submitted");
+            }
+        } catch (Exception e) {
+            Log.e(LOG_TAG, "Caused by Empty Fields");
+            e.printStackTrace();
+            Toast.makeText(SetTwoActivity.this, R.string.empty_fields, Toast.LENGTH_LONG).show();
+        }
+    }
+
     /**
      * Function to return the RadioValue
      *
@@ -168,7 +322,9 @@ public class SetTwoActivity extends AppCompatActivity {
                 + setString + "\n" + getString(R.string.attempts_score) + "\u0020" + attemptString +
                 "\n" + getString(R.string.title_score) + "\u0020" + points;
         String result = "Team:" + teamString + " Att:" + attemptString + " Scr:" + points;
-        UserDetailsActivity.mDatabaseReferenceResult.push().setValue(result);
+        if (submitCount < 1) {
+            UserDetailsActivity.mDatabaseReferenceResult.push().setValue(result);
+        }
         Log.i(LOG_TAG, "Score Updated in Db");
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_score)
