@@ -7,4 +7,4 @@ Get the stable <i>Quizdroid v1.6</i> APK [here](http://bit.ly/Emblazon).
 
 Made by Team [CSI-MRITS](http://mrits.ac.in/CSI/). :heart:
 
-Connect with us on [Facebook](https://www.facebook.com/CSIMRITS2k1718/) [Instagram](https://www.instagram.com/csimrits/)
+Connect with us on [Facebook](https://www.facebook.com/CSIMRITSOfficial/) [Instagram](https://www.instagram.com/csimrits/)
