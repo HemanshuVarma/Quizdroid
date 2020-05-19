@@ -1,6 +1,8 @@
 # Quizdroid
 ### An Quiz App made for State Level Technical Event <i>Emblazon</i>
 
+###### Note: Database Read/Write access has been disabled. Please contact [here](mailto:hemanshuvarma916@gmail.com) to enable
+
 ![emblazon poster](https://user-images.githubusercontent.com/36810824/52175467-70271f80-27ca-11e9-86bb-b52986be1c51.jpg)
 
 ### Appstats
